@@ -15,7 +15,7 @@ html, body {
 .page-header h2 {
   font-weight: normal;
 }
-.page-header__link {
+.page-header__link:not(.mylink) {
   text-decoration: none;
   font-size: 1rem;
   padding: 0.6rem 0.9rem;
@@ -37,6 +37,11 @@ html, body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+#mylink-style {
+  font-weight: bold;
+  color: blue;
+}
+
 /* #inpainted-music, #controll-number-of-bars {
   padding: 0 2rem;
 } */
@@ -53,7 +58,7 @@ main {
     padding-right: 0%;
   }
 }
-#inpainted-music h2, #controll-number-of-bars h2,
+#inpainted-music h2:not(#mylink), #controll-number-of-bars h2,
 #inpainted-music h3, #controll-number-of-bars h3  {
   color: #209441;
   opacity: 0.9;
@@ -123,7 +128,7 @@ midi-visualizer svg rect.note.active {
   display: flex;
 }
 
-#inpainted-music a, #controll-number-of-bars a {
+#inpainted-music a:not(.mylink), #controll-number-of-bars a {
   color:#209441;
   display: block;
   padding: 1rem 1.5rem;

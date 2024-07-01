@@ -76,7 +76,8 @@
           <center><img src="pom_mask_shrunk.png"></center><br>
           ...doesn't sound amazing. We need to crank up the RePaint parameter to get enough notes to read the words, but more RePaint seems to introduce more randomness.
           Conditioning on chords might help, but that part of the code isn't working yet.
-          What we can do instead is use a lower value of RePaint (say, 3)and then "ReMask" a few times, i.e., run the sampling again with a new mask in which the previously-generated notes are left alone. 
+          What we can do instead is use a lower value of RePaint (say, 3) and then "ReMask" a few times, i.e., run the sampling again with a new mask in which the previously-generated notes are left alone. 
+          Using a lower value of RePaint and ReMask-ing seems to better preserve the "musicality" than the randomness we from higher RePaint values.
           
           <section id="inpainted-music-song-2">
           <div class='anchor-container'>

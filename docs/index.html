@@ -76,17 +76,20 @@
           <center><img src="pom_mask_shrunk.png"></center><br>
           ...doesn't sound amazing. We need to crank up the RePaint parameter to get enough notes to read the words, but more RePaint seems to introduce more randomness.
           Conditioning on chords might help, but that part of the code isn't working yet.
+          What we can do instead is use a lower value of RePaint (say, 3)and then "ReMask" a few times, i.e., run the sampling again with a new mask in which the previously-generated notes are left alone. 
           
           <section id="inpainted-music-song-2">
           <div class='anchor-container'>
-             <a midi-url="pom_shrunk_gen6.mid" class='selected'>Spelling</a>
+             <a midi-url="pom_shrunk_5xrepaint3.mid" class='selected'>Repaint=3,ReMask=5</a>
+             <a midi-url="pom_shrunk_3xrepaint4.mid" class='selected'>Repaint=4,ReMask=3</a>
+             <a midi-url="pom_shrunk_1xrepaint6.mid" class='selected'>Repaint=6,ReMask=1</a>
              <!--<a midi-url="uncond_shh[scale=0.0]_24-04-10_180038.mid" >Clip F</a> -->
          </div>
          <midi-visualizer id='inpainted-music-song-2-visualizer'
-             src="pom_shrunk_gen6.mid">
+             src="pom_shrunk_5xrepaint3.mid">
          </midi-visualizer>
          <midi-player id='inpainted-music-song-2-player'
-             src="pom_shrunk_gen6.mid"
+             src="pom_shrunk_5xrepaint3.mid"
              sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
              visualizer="#inpainted-music-song-2-visualizer">
          </midi-player>
